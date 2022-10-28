@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CustomViewAssignment</string>
+    <string name="text_omp_dashboard_title">OMP Dashboard</string>
+    <string name="text_banner">Create additional pages</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back_ios_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDashboardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/btnBack"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:text="@string/text_omp_dashboard_title"
+                android:textColor="@color/colorSecondaryText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="@dimen/width_progress_box"
+            android:layout_height="@dimen/height_progress_box"
+            android:layout_alignBottom="@id/llHeader"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:textColor="@color/white"
+            android:text="In progress"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/background_progress_text"
+            android:backgroundTint="@color/colorProgress"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBannerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llHeader"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_alignStart="@id/llHeader"
+            android:text="@string/text_banner"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold"
+            android:textColor="@color/colorSecondaryText"/>
+        
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBannerText"
+            android:layout_alignStart="@id/tvBannerText"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="03 days | Dec 18, 2019"
+            android:textSize="@dimen/text_small"/>
+
+        <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+            android:layout_width="100dp"
+            android:layout_height="170dp"
+            android:layout_below="@id/tvDate"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="29dp"
+            android:src="@drawable/avatar"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
