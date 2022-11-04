@@ -29,5 +29,8 @@
     <dimen name="text_big_3x">80sp</dimen>
     <dimen name="width_progress_box">100dp</dimen>
     <dimen name="height_progress_box">32dp</dimen>
+    <dimen name="width_avatar">60dp</dimen>
+    <dimen name="height_avatar">60dp</dimen>
+    <dimen name="radius_top_left_task_background">70dp</dimen>
 
 </resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.zlh.customviewassignment.views.viewpods.ProfileViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    
+    <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/margin_medium"
+        app:srcCompat="@drawable/avatar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:background="@drawable/background_curve_corner_white">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOpenTask"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:textSize="@dimen/text_heading_1x"
+            android:text="Zachary Butler" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJobPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:text="UI Designer" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCloseTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:text="Closed Tasks"
+            android:textColor="@android:color/darker_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCloseTaskNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOpenTaskLabel"
+            android:layout_marginStart="@dimen/margin_xxlarge"
+            android:text="361"
+            android:textSize="@dimen/text_regular_3x"
+            android:textColor="@color/colorSecondaryText"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenTaskLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:text="Open Tasks" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOpenTaskLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_xxlarge"
+            android:textColor="@color/colorSecondaryText"
+            android:text="3" />
+
+
+
+
+    </RelativeLayout>
+
+</com.example.zlh.customviewassignment.views.viewpods.ProfileViewPod>

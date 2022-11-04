@@ -6,4 +6,13 @@
         <attr name="strokeWidth" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="CircularProgressIndicator">
+        <attr name="progress" format="integer"/>
+        <attr name="progressBarRadius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="progressBarHeight" format="dimension" />
+        <attr name="progressBarProgress" format="integer" />
+    </declare-styleable>
 </resources>

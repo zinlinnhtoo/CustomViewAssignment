@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activities.CreateNewTaskActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back_ios_black_24dp"
+                android:tint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCreateNewTaskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/btnBack"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:text="A Create New Task"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="@dimen/width_progress_box"
+            android:layout_height="@dimen/height_progress_box"
+            android:layout_alignBottom="@id/llHeader"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:textColor="@color/colorAccent"
+            android:text="Save"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="end" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llHeader"
+            android:layout_alignStart="@id/llHeader"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:letterSpacing="0.1"
+            android:text="Client"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_small" />
+        
+        <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+            android:id="@+id/ivClientImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/tvClient"
+            android:layout_alignStart="@id/tvClient"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/avatar"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvClient"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivClientImage"
+            android:backgroundTint="@color/white"
+            android:foregroundTint="@color/white"
+            android:entries="@array/client_list" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProjectNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivClientImage"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:letterSpacing="0.1"
+            android:text="Project Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_small" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etProjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProjectNameLabel"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProjectDateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etProjectName"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:letterSpacing="0.1"
+            android:text="Project Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_small" />
+
+        <LinearLayout
+            android:id="@+id/llTaskDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProjectDateLabel"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:weightSum="5">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_weight="2"
+                android:drawableStart="@drawable/ic_baseline_calendar_month_24dp_black"
+                android:drawablePadding="@dimen/margin_medium_3"
+                android:text="Start Date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_medium_3"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTaskEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_weight="2"
+                android:drawableStart="@drawable/ic_baseline_calendar_month_24dp_black"
+                android:gravity="center_horizontal"
+                android:text="End Date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAssignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTaskDates"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:letterSpacing="0.1"
+            android:text="Assignee"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_small" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAssignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAssignee"
+            android:layout_marginStart="@dimen/margin_medium_2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvAssignee"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:letterSpacing="0.1"
+            android:text="Category"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_small" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTaskCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCategory"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/margin_medium_2"
+            android:paddingEnd="@dimen/margin_medium_2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rvTaskCategory"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:background="@drawable/background_curve_corner">
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:elevation="@dimen/margin_medium_2"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+                android:id="@+id/ivAttachFile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:scaleType="center"
+                app:strokeColor="@color/teal_200"
+                app:strokeWidth="1dp"
+                app:srcCompat="@drawable/ic_baseline_attach_file_24"
+                app:tint="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivAttachFile"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:letterSpacing="0.1"
+                android:text="Attachment"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_small" />
+
+            <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+                android:id="@+id/ivFile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvAttachment"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:scaleType="fitCenter"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp"
+                app:srcCompat="@drawable/avatar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAttachmentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAttachment"
+                android:layout_alignTop="@id/ivFile"
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_toEndOf="@id/ivFile"
+                android:text="Reference_1" />
+
+            <com.example.zlh.customviewassignment.views.components.ProgressBar
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAttachmentName"
+                android:layout_alignStart="@id/tvAttachmentName"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                app:progressBarHeight="10dp"
+                app:progressBarProgress="50" />
+
+            <com.example.zlh.customviewassignment.views.components.CircularAvatarImageView
+                android:id="@+id/btnFileUploadCancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvAttachment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:elevation="@dimen/margin_xxlarge"
+                android:scaleType="center"
+                app:strokeColor="#CAC0C0"
+                app:strokeWidth="1dp"
+                app:srcCompat="@drawable/ic_baseline_close_24dp_black" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:background="@drawable/background_button"
+            android:gravity="center"
+            android:text="Create Task"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

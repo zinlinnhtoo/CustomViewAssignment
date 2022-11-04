@@ -14,4 +14,6 @@
     <color name="colorAccent">#2cc09c</color>
     <color name="colorSecondaryText">#21355C</color>
     <color name="colorProgress">#f26950</color>
+    <color name="colorProgressBackground">#f5c7bf</color>
+    <color name="colorTaskListBackground">#e6ecfa</color>
 </resources>
